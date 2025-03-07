@@ -1,5 +1,24 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    display: flex; /* フレックスボックスを使用して中央揃え */
+    justify-content: center; /* 水平方向に中央揃え */
+    align-items: center; /* 垂直方向に中央揃え */
+    height: 100vh; /* ビューポートの高さを100%に設定 */
+    margin: 0; /* デフォルトのマージンをリセット */
+    background-color: #f0f0f0; /* 背景色を薄いグレーに設定 */
+}
+
+.image-container {
+    overflow: hidden; /* 画像がコンテナを超えた場合に隠す */
+}
+
+img {
+    width: 100%; /* 画像の幅を100%に設定 */
+    max-width: 600px; /* 最大幅を600pxに設定 */
+    transition: transform 0.3s ease, filter 0.3s ease; /* 変化を滑らかにする */
+    filter: blur(5px); /* 通常時に5pxのぼかしを適用 */
+}
+
+img:hover {
+    transform: scale(1.05); /* ホバー時に5%大きくする */
+    filter: none; /* ホバー時にぼかしを解除 */
 }
