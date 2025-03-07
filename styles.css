@@ -7,7 +7,7 @@ body {
     width: 300px;
     height: 300px;
     overflow: hidden;
-    transform: translateX(-1000px);
+    position: relative; /* 追加 */
 }
 
 img {
@@ -15,6 +15,9 @@ img {
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
+    position: absolute; /* 追加 */
+    top: 0; /* 追加 */
+    left: -1000px; /* 追加 */
 }
 
 img:hover {
